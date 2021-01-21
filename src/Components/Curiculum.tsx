@@ -1,6 +1,6 @@
 import React, { Component, CSSProperties } from 'react'
 import { Card } from './Cards/Card';
-import { guilherme12102020 as cv} from '../Data/Guilherme12102020'
+import { guilherme21012021 as cv} from '../Data/Guilherme21012021'
 
 const padding = '1.8em'
 const style: {[id: string]: CSSProperties} = {
@@ -39,7 +39,7 @@ export class Curriculum extends Component {
     }
 
     render() {
-        const gridTemplateColumns = this.state.isDesktop ? '4fr 6fr' : '1fr'
+        const gridTemplateColumns = this.state.isDesktop ? '3.5fr 6.5fr' : '1fr'
         return <div style={{...style.container, gridTemplateColumns}}>
             <div style={style.side}>
                 {cvLeft.map(c => <Card card={c}/>)}
