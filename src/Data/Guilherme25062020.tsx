@@ -129,7 +129,6 @@ export const guilherme12012019: CV = {
                         size: 80
                     },
                     value: 'Github.com/ Guilherme8482',
-                    link: 'https://github.com/Guilherme8482'
                 }]
             ]
         },
