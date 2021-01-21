@@ -130,7 +130,7 @@ export const guilherme12012019: CV = {
                     },
                     value: 'Github.com/ Guilherme8482',
                 }]
-            ]
+            ],
         },
         {
             title: {
