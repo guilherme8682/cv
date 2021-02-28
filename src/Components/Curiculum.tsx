@@ -1,6 +1,6 @@
 import React, { Component, CSSProperties } from 'react'
 import { Card } from './Cards/Card';
-import { guilherme21012021 as cv} from '../Data/Guilherme21012021'
+import { Guilherme20210226 as cv} from '../Data/Guilherme20210226'
 
 const padding = '1.8em'
 const style: {[id: string]: CSSProperties} = {
