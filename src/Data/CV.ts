@@ -20,6 +20,7 @@ export interface Information {
         size?: number,
         path: string
     }
+    link?: string
     bar?: {
         name: string, 
         size: number
