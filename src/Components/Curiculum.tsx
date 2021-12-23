@@ -1,6 +1,6 @@
 import React, { Component, CSSProperties } from 'react'
 import { Card } from './Cards/Card';
-import { Guilherme20211112 as cv} from '../Data/Guilherme20211112'
+import { Guilherme20211222 as cv} from '../Data/Guilherme20211222'
 
 const padding = '1.8em'
 const style: {[id: string]: CSSProperties} = {
@@ -18,8 +18,10 @@ const style: {[id: string]: CSSProperties} = {
         gridGap: '2em'
     }
 }
-const cvLeft = cv.card.slice(0, cv.card.length / 2 | 0)
-const cvRight = cv.card.slice(cv.card.length / 2 | 0)
+const cvLeft = cv.card.filter(c => c.mainSide)
+const cvRight = cv.card.filter(c => !c.mainSide)
+
+
 
 export class Curriculum extends Component {
     
@@ -39,13 +41,13 @@ export class Curriculum extends Component {
     }
 
     render() {
-        const gridTemplateColumns = this.state.isDesktop ? '3.5fr 6.5fr' : '1fr'
+        const gridTemplateColumns = this.state.isDesktop ? '3.8fr 6.2fr' : '1fr'
         return <div style={{...style.container, gridTemplateColumns}}>
             <div style={style.side}>
-                {cvLeft.map(c => <Card card={c}/>)}
+                {cvLeft.map((c, i) => <Card card={c} key={i}/>)}
             </div>
             <div style={style.side}>
-                {cvRight.map(c => <Card card={c}/>)}
+                {cvRight.map((c, i) => <Card card={c} key={i}/>)}
             </div>
         </div>
   }

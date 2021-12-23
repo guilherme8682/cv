@@ -1,10 +1,15 @@
 import React, { Component, CSSProperties } from 'react';
 import { Information as InfoData } from '../../Data/CV';
-import { myBlue, lightGray } from '../Styles';
+import { myBlue, lightGray, white } from '../Styles';
 
 const barContainer: CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '20px',
+};
+const bar: CSSProperties = {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
+    gridTemplateColumns: 'minmax(10px, 1.5fr) minmax(10px, 1.5fr) minmax(10px, 1.4fr)',
     gridGap: '1em'
 };
 export class BarInformation extends Component<{
@@ -13,9 +18,12 @@ export class BarInformation extends Component<{
     render() {
         const b = this.props.bar;
         return <div style={barContainer}>
-            {b.bar!.map(bar => <div style={barContainer}>
-                <div>{bar.name}</div>
-                <div><Bar size={bar.size} /></div>
+            {b.bar!.map((b, i) => <div style={bar} key={i}>
+                <div>{b.name}</div>
+                <Bar size={b.size} />
+                <div style={{color: lightGray, textAlign: 'right', fontStyle: 'italic'}}>
+                    {b.description}
+                </div>
             </div>)}
         </div>;
     }
@@ -30,11 +38,11 @@ class Bar extends Component<{
             borderRadius: '3px'
         }}>
             <div style={{
-                backgroundColor: myBlue,
+                backgroundColor: white,
                 width: this.props.size + '%',
                 borderRadius: '3px'
             }}>
-                <br />
+                <br/>
             </div>
         </div>;
     }

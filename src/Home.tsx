@@ -11,7 +11,7 @@ const container: CSSProperties = {
 const background: CSSProperties = {
   backgroundColor: myBlue,
   width: '100%',
-  height: '250px',
+  height: '235px',
   zIndex: -1,
   position: 'fixed'
 }
