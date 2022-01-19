@@ -5,11 +5,10 @@ import { myBlue, lightGray, white } from '../Styles';
 const barContainer: CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
-    gap: '20px',
 };
 const bar: CSSProperties = {
     display: 'grid',
-    gridTemplateColumns: 'minmax(10px, 1.5fr) minmax(10px, 1.5fr) minmax(10px, 1.4fr)',
+    gridTemplateColumns: 'minmax(10px, 1.6fr) minmax(10px, 1.2fr) minmax(10px, 1fr)',
     gridGap: '1em'
 };
 export class BarInformation extends Component<{

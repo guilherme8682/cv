@@ -1,8 +1,9 @@
 import React, { Component, CSSProperties } from 'react'
 import { Card } from './Cards/Card';
-import { Guilherme20211222 as cv} from '../Data/Guilherme20211222'
+import { guilherme as cv} from '../Data/Guilherme20220113'
+import { HeaderCV } from './HeaderCV';
 
-const padding = '1.8em'
+const padding = '1.5em'
 const style: {[id: string]: CSSProperties} = {
     container: {
         padding,
@@ -15,13 +16,14 @@ const style: {[id: string]: CSSProperties} = {
     },
     side: {
         display: 'grid',
-        gridGap: '2em'
+        gridGap: '1.5em'
     }
 }
-const cvLeft = cv.card.filter(c => c.mainSide)
-const cvRight = cv.card.filter(c => !c.mainSide)
 
+const desktopColumns = '3.8fr 6.2fr'
+const mobileColumns = '1fr'
 
+type CardList = typeof cv.card
 
 export class Curriculum extends Component {
     
@@ -41,7 +43,19 @@ export class Curriculum extends Component {
     }
 
     render() {
-        const gridTemplateColumns = this.state.isDesktop ? '3.8fr 6.2fr' : '1fr'
+        const gridTemplateColumns = this.state.isDesktop ? desktopColumns : mobileColumns
+        // const gridTemplateColumns = desktopColumns
+        
+        let cvLeft: CardList, cvRight: CardList;
+        if(this.state.isDesktop){
+            cvLeft = cv.card.filter(c => c.mainSide)
+            cvRight = cv.card.filter(c => !c.mainSide)
+        }else{
+            cvLeft = cv.card
+            cvRight = []
+        }
+
+
         return <div style={{...style.container, gridTemplateColumns}}>
             <div style={style.side}>
                 {cvLeft.map((c, i) => <Card card={c} key={i}/>)}

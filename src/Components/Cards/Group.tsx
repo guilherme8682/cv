@@ -14,6 +14,7 @@ const container: CSSProperties = {
 }
 const containerHover: CSSProperties = {
     transform: 'scale(1.05)',
+    cursor: 'pointer',
 }
 
 
@@ -26,12 +27,11 @@ export class Group extends Component<{info: InfoData[]}>{
     render(){
         const info = this.props.info
         const link = info[0].link
-        return <a style={{ 
+        return <div style={{ 
                 ...container, 
-                ...(this.state.isHover && link ? containerHover : {})
+                ...(this.state.isHover ? containerHover : {})
             }}
-            href={link}
-            target="_blank"
+            onClick={() => { if(link) window.open(link) }}
             onMouseEnter={() => { this.setState({isHover: true}) }}
             onMouseLeave={() => { this.setState({isHover: false}) }}>
             {info.map((i, index) => 
@@ -47,6 +47,6 @@ export class Group extends Component<{info: InfoData[]}>{
                     }
                 </div>
             )}
-        </a>
+        </div>
     }
 }

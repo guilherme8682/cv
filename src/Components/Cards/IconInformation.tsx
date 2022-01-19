@@ -8,7 +8,8 @@ const iconContent: CSSProperties = {
 };
 const icon: CSSProperties = {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingRight: 5,
 }
 const value: CSSProperties = {
     display: 'flex',

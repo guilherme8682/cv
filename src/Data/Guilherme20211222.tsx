@@ -85,14 +85,14 @@ export const Guilherme20211222: CV = {
                 }],
                 [{
                     link: 'https://www.linkedin.com/in/guilherme8482/',
-                    value: 'in/Guilherme8482',
+                    value: 'Linkedin/Guilherme8482',
                     icon: {
                         path: linkedin
                     }
                 }],
                 [{
                     link: 'https://github.com/Guilherme8482',
-                    value: 'github.com/Guilherme8482',
+                    value: 'Github/Guilherme8482',
                     icon: {
                         path: github
                     }
@@ -210,24 +210,44 @@ export const Guilherme20211222: CV = {
             },
             component: [
                 [{
-                    value: 'Linguagens',
+                    value: '',
                     bar: [
                         {name: 'MYSQL', size: 85, description: '6 anos'},
+                    ]
+                }],
+                [{
+                    value: '',
+                    bar: [
                         {name: 'Python', size: 95, description: '6 anos'},
+                    ]
+                }],
+                [{
+                    value: '',
+                    bar: [
                         {name: 'TensorFlow', size: 75, description: '3 anos'},
+                    ]
+                }],
+                [{
+                    value: '',
+                    bar: [
                         {name: 'R', size: 55, description: '2 anos'},
                     ]
-                }]
+                }],
                 
             ],
             subComponent: [
                 [{
-                    value: 'Idiomas',
+                    value: '',
                     bar: [
-                        {name: 'INGLÊS', size: 70, description: 'avançado'},
-                        {name: 'ESPANHOL', size: 40, description: 'iniciante'}
+                        {name: 'Inglês', size: 70, description: 'avançado'},
                     ]
-                }]
+                }],
+                [{
+                    value: '',
+                    bar: [
+                        {name: 'Espanhol', size: 40, description: 'iniciante'}  
+                    ]
+                }],
             ]
         },
         {   
@@ -259,7 +279,7 @@ export const Guilherme20211222: CV = {
                         value: 'Graph Maker'
                     },
                     {
-                        value: 'Aplicativo de desktop para criar e manipular estruturas de dedados em grafos de forma visual.',
+                        value: 'Aplicativo para criar e manipular estruturas de de dados em grafos para análise visual.',
                         style: {color: lightGray}
                     },
                     {
