@@ -1,6 +1,6 @@
 import React, { Component, CSSProperties } from "react";
 import { myBlue, white } from "./Components/Styles";
-
+import { observer } from "mobx-react"
 import printImage from './Data/icons/print.png'
 
 
@@ -35,7 +35,8 @@ const containerHover: CSSProperties = {
 }
 
 
-export class PrintButton extends Component{
+@observer
+export class TranslateButton extends Component{
 
     state = {
         isHover: false
@@ -62,7 +63,7 @@ export class PrintButton extends Component{
                     : null
             }
             <br />
-            <img src={printImage} alt="Imprimir" style={{ height: '40px', marginRight: '5px' }} />
+            <img src={printImage} alt="Trans" style={{ height: '40px', marginRight: '5px' }} />
         </a>
     }
 }

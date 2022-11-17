@@ -1,8 +1,8 @@
 import React, { Component, CSSProperties } from 'react'
+import { Actions } from './Actions';
 import { Curriculum } from './Components/Curiculum'
 import { HeaderCV } from './Components/HeaderCV';
 import { myBlue, backGray } from './Components/Styles';
-import { PrintButton } from './PrintButton';
 
 const container: CSSProperties = {
   height: '100%',
@@ -39,7 +39,7 @@ export default class Home extends Component {
         <div style={paper}></div>
         <Curriculum />
       </div>
-      <PrintButton />
+      <Actions />
     </div>
   }
 }

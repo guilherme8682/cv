@@ -61,6 +61,7 @@ export class HeaderCV extends Component {
         }
 
         return <div
+            className="noprint"
             style={style.container}
         >
             <Line />
